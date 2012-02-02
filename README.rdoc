@@ -1,0 +1,3 @@
+It´s my blog under construction.
+The blog is made on rails 3.2.1 and the awesome bootstrap twitter.
+More notices coming soon. :) :) 
