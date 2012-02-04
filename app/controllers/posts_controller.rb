@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+ 
  skip_before_filter :authorize , :only => [:new, :create, :edit, :update, :destroy]
  
   # GET /posts
