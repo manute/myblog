@@ -14,9 +14,9 @@
 	  if index>0 && index<4 %>	
 		<div class="span4" >
 			<h2><%= post.title %></h2>
-			<div style="word-wrap: break-word;height:45px;">
-				<%= post.body  %> 
-			<div>
+			<p style="word-wrap: break-word;">
+				<%=  truncate(post.body, :length => 120)  %> 
+			</p>
 			<p>
 				<%= link_to 'Ver más »' , post ,:class =>"btn" %>
 			</p>
