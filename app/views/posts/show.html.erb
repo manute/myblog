@@ -8,12 +8,11 @@
 </p>
 </header>
 </br>
-<div style="max-width: 960px;
-    min-width: 960px;">
+
 <p style="word-wrap: break-word;">
-  <%= @post.body %>
+  <%= @post.body.html_safe %>
 </p>
-<div>
+
 
 </br>
 <% if session[:user_id] %>	

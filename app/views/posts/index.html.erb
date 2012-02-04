@@ -1,7 +1,7 @@
 <% @post = @posts[0] %>
  	<div class="hero-unit">
 		<h2><%= @post .title %></h2>
-		<p style="word-wrap: break-word;"><%= @post.body %> </p>
+		<p style="word-wrap: break-word;"><%= @post.body.html_safe.first(130)+"..." %> </p>
 		<p>
 			<%= link_to 'Ver más »' , @post ,:class =>"btn btn-primary btn-large" %>
 		</p>
@@ -15,7 +15,7 @@
 		<div class="span4" >
 			<h2><%= post.title %></h2>
 			<p style="word-wrap: break-word;">
-				<%=  truncate(post.body, :length => 120)  %> 
+				<%=  post.body.html_safe.first(130)+"..."  %> 
 			</p>
 			<p>
 				<%= link_to 'Ver más »' , post ,:class =>"btn" %>
