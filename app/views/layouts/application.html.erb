@@ -31,10 +31,10 @@
 							<%= link_to 'Inicio' , posts_path %>
 						</li>
 						<li>
-							<a href="#about">Acerca de mi</a>
+							<%= link_to 'Acerca de mi' , aboutme_path %>
 						</li>
 						<li>
-							<a href="#contact">Contactar</a>
+							<a href="mailto:manuteali@gmail.com">Contactar</a>
 						</li>
 						<% if session[:user_id] %>	
 						<li>
@@ -42,6 +42,9 @@
 						</li>
 						<li>
 							<%= link_to 'Salir', logout_path, :method => :delete %>
+						</li>
+						<li>
+							<%= link_to 'Usuarios', users_path %>
 						</li>
 						<% else %>
 						<li>

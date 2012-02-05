@@ -1,13 +1,19 @@
 class UsersController < ApplicationController
+  skip_before_filter :authorize , :only => [:new, :create, :edit, :update, :destroy]
+  
   # GET /users
   # GET /users.json
   def index
-    @users = User.order(:name)
+    if session[:user_id]
+      @users = User.order(:name)
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @users }
-    end
+      respond_to do |format|
+        format.html # index.html.erb
+        format.json { render json: @users }
+      end
+   else
+      redirect_to posts_url , :notice  => "Usuario no Autenticado"
+   end   
   end
 
   # GET /users/1

@@ -4,6 +4,10 @@ Myblog::Application.routes.draw do
 
   resources :posts
   
+  get 'aboutme' => 'aboutme#index'
+     controller :aboutme do 
+  end
+  
   get 'admin' => 'admin#index'
     controller :sessions do 
       get 'login' => :new 
