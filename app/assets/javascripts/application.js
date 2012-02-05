@@ -13,3 +13,15 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(function($) {
+    $("textarea").markItUp(mySettings);
+});
+$(function($) {
+	$("a").click(function () { 
+	  $("li").each(function(index) {
+		     $(this).removeClass("active");
+	   });	
+     $(this).parent().addClass("active");
+   });
+});

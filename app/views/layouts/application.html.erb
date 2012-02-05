@@ -6,11 +6,7 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<script type="text/javascript" >
-   $(document).ready(function() {
-     $("textarea").markItUp(mySettings);
-   });
-</script>
+
 <body data-offset="50" data-target=".subnav" data-spy="scroll" data-rendering="true">
     <div class="navbar navbar-fixed-top">
     	<div class="navbar-inner">
@@ -27,7 +23,7 @@
     			<!-- Everything you want hidden at 940px or less, place within here -->
     			<div class="nav-collapse">
     				<ul class="nav">
-						<li class="active">
+						<li> 
 							<%= link_to 'Inicio' , posts_path %>
 						</li>
 						<li>
